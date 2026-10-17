@@ -3,16 +3,17 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   line-height: 1.6;
-  background: #f9f9fb;
-  color: #333;
+  background: #121212; /* Dark background */
+  color: #e0e0e0;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
+  position: relative;
 }
 .hero h1 {
   font-size: 3rem;
@@ -23,31 +24,32 @@ body {
   margin: 1rem 0;
 }
 .cta-btn {
-  background: #023e8a;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
   color: white;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: transform 0.3s;
 }
 .cta-btn:hover {
-  background: #0077b6;
+  transform: scale(1.05);
 }
 
 /* Navigation */
 nav {
   display: flex;
   justify-content: center;
-  background: #023e8a;
+  background: #1f1f1f;
 }
 nav a {
-  color: white;
+  color: #e0e0e0;
   padding: 1rem;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: color 0.3s, background 0.3s;
 }
 nav a:hover {
-  background: #0077b6;
+  background: #333;
+  color: #ff6a00;
 }
 
 /* Sections */
@@ -57,7 +59,7 @@ section {
   margin: auto;
 }
 section h2 {
-  color: #0077b6;
+  color: #ff6a00;
   margin-bottom: 1rem;
 }
 
@@ -70,22 +72,55 @@ section h2 {
 .card {
   flex: 1;
   min-width: 250px;
-  background: white;
+  background: #1e1e1e;
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
 .card h3 {
   margin-top: 0;
-  color: #023e8a;
+  color: #ee0979;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Images */
+.section-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Contact Button */
+#contactBtn {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+#contactBtn:hover {
+  background: #0077b6;
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #023e8a;
-  color: white;
+  background: #1f1f1f;
+  color: #aaa;
 }
 
 /* Responsive */
