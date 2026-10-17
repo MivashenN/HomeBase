@@ -115,6 +115,11 @@ nav a:hover {
 }
 
 /* Contact Section */
+#contact {
+  text-align: center;   /* Centers text and buttons horizontally */
+  padding: 3rem 2rem;
+}
+
 #contact h2 {
   font-size: 2.2rem;
   color: #ff6a00;
