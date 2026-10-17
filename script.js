@@ -14,6 +14,11 @@ document.getElementById('contactBtn').addEventListener('click', () => {
   });
 });
 
+// Open email client when clicking Email button
+document.getElementById('emailBtn').addEventListener('click', () => {
+  window.location.href = "mailto:mivashenmedia@gmail.com";
+});
+
 // Animated tagline typing effect
 const tagline = document.querySelector('.tagline');
 const text = "Web Design & Social Media Management";
