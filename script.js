@@ -38,19 +38,29 @@ window.onload = () => {
   window.scrollTo(0, 0);
 };
 
-// Smooth zoom effect on service card images
+// Smooth zoom effect: image zooms in, text zooms out
 let ticking = false;
 window.addEventListener('scroll', () => {
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      document.querySelectorAll('.zoom-card img').forEach(img => {
-        const rect = img.getBoundingClientRect();
+      document.querySelectorAll('.zoom-card').forEach(card => {
+        const img = card.querySelector('img');
+        const overlay = card.querySelector('.card-overlay');
+        const rect = card.getBoundingClientRect();
+
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           const scrollFactor = (window.innerHeight - rect.top) / window.innerHeight;
-          const scale = 1 + scrollFactor * 0.1; // smaller factor for smoother zoom
-          img.style.transform = `scale(${scale})`;
+
+          // Image zooms in
+          const imgScale = 1 + scrollFactor * 0.2;
+          img.style.transform = `scale(${imgScale})`;
+
+          // Text zooms out (slightly larger)
+          const textScale = 1 + scrollFactor * 0.3;
+          overlay.style.transform = `translate(-50%, -50%) scale(${textScale})`;
         } else {
           img.style.transform = 'scale(1)';
+          overlay.style.transform = 'translate(-50%, -50%) scale(1)';
         }
       });
       ticking = false;

@@ -5,7 +5,7 @@ body {
   line-height: 1.6;
   background: #121212;
   color: #e0e0e0;
-  font-size: 18px;
+  font-size: 20px; /* larger base text */
 }
 
 /* Hero Section */
@@ -15,13 +15,13 @@ body {
   text-align: center;
   padding: 6rem 2rem;
 }
-.hero h1 { font-size: 3.5rem; margin: 0; }
-.hero p { font-size: 1.5rem; margin: 1rem 0; }
+.hero h1 { font-size: 4rem; margin: 0; }
+.hero p { font-size: 1.8rem; margin: 1rem 0; }
 .cta-btn {
   background: linear-gradient(90deg, #ff6a00, #ee0979);
   color: white;
-  font-size: 1.2rem;
-  padding: 1rem 1.8rem;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 5px;
   transition: transform 0.3s;
@@ -36,7 +36,7 @@ nav {
 }
 nav a {
   color: #e0e0e0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding: 1.2rem;
   text-decoration: none;
   transition: color 0.3s, background 0.3s;
@@ -56,12 +56,12 @@ nav a:hover { background: #333; color: #00b4d8; }
   border-radius: 8px;
   text-align: center;
 }
-#about h2 { font-size: 2.2rem; color: #ff6a00; }
-#about p { font-size: 1.2rem; }
+#about h2 { font-size: 2.5rem; color: #ff6a00; }
+#about p { font-size: 1.4rem; }
 
 /* Services Section */
 #services h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #ff6a00;
   text-align: center;
 }
@@ -78,7 +78,6 @@ nav a:hover { background: #333; color: #00b4d8; }
 }
 .card img {
   width: 100%;
-  height: auto;
   display: block;
   transition: transform 0.3s ease-out;
   will-change: transform; /* GPU acceleration */
@@ -87,20 +86,22 @@ nav a:hover { background: #333; color: #00b4d8; }
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.5);
   padding: 1.5rem;
   border-radius: 8px;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
 }
 .card-overlay h3 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 0 0 0.5rem;
   color: #00b4d8; /* light blue heading */
 }
 .card-overlay p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0;
 }
 
@@ -109,10 +110,10 @@ nav a:hover { background: #333; color: #00b4d8; }
   text-align: center;
   padding: 3rem 2rem;
 }
-#contact h2 { font-size: 2.2rem; color: #ff6a00; margin-bottom: 1rem; }
-#contact p { font-size: 1.2rem; margin-bottom: 1rem; }
+#contact h2 { font-size: 2.5rem; color: #ff6a00; margin-bottom: 1rem; }
+#contact p { font-size: 1.4rem; margin-bottom: 1rem; }
 #emailBtn, #contactBtn {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
@@ -137,11 +138,11 @@ footer {
   padding: 1rem;
   background: #1f1f1f;
   color: #aaa;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .hero p { font-size: 1.2rem; }
+  .hero h1 { font-size: 3rem; }
+  .hero p { font-size: 1.5rem; }
 }
