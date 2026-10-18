@@ -57,6 +57,7 @@ nav a:hover {
 
 /* About Section with background */
 #about {
+  text-align: center;       /* Centers text and buttons horizontally */
   position: relative;
   background: url('images/about.jpg') center/cover no-repeat;
   color: #e0e0e0;
