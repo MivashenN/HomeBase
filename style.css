@@ -68,6 +68,7 @@ nav a:hover {
   background: rgba(0, 0, 0, 0.6); /* transparent overlay */
   padding: 2rem;
   border-radius: 8px;
+  text-align: center; /* centers text inside overlay */
 }
 #about h2 {
   font-size: 2.2rem;
@@ -81,6 +82,7 @@ nav a:hover {
 #services h2 {
   font-size: 2.2rem;
   color: #ff6a00;
+  text-align: center;
 }
 .cards {
   display: flex;
@@ -116,22 +118,27 @@ nav a:hover {
 
 /* Contact Section */
 #contact {
-  text-align: center;   /* Centers text and buttons horizontally */
+  text-align: center;       /* Centers text and buttons horizontally */
   padding: 3rem 2rem;
 }
-
 #contact h2 {
   font-size: 2.2rem;
   color: #ff6a00;
+  margin-bottom: 1rem;
+}
+#contact p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 #emailBtn, #contactBtn {
-  font-size: 1.1rem;
-  padding: 1rem 1.8rem;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 1rem;
+  margin: 0.5rem;
   transition: transform 0.3s, background 0.3s;
+  display: inline-block;
 }
 #emailBtn {
   background: linear-gradient(90deg, #ff6a00, #ee0979);

@@ -33,3 +33,8 @@ function typeEffect() {
 }
 tagline.textContent = "";
 typeEffect();
+
+// Force page to start at top on load
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
