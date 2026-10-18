@@ -38,16 +38,23 @@ window.onload = () => {
   window.scrollTo(0, 0);
 };
 
-// Zoom effect on service card images when scrolling
+// Smooth zoom effect on service card images
+let ticking = false;
 window.addEventListener('scroll', () => {
-  document.querySelectorAll('.zoom-card img').forEach(img => {
-    const rect = img.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      const scrollFactor = (window.innerHeight - rect.top) / window.innerHeight;
-      const scale = 1 + scrollFactor * 0.2;
-      img.style.transform = `scale(${scale})`;
-    } else {
-      img.style.transform = 'scale(1)';
-    }
-  });
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      document.querySelectorAll('.zoom-card img').forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const scrollFactor = (window.innerHeight - rect.top) / window.innerHeight;
+          const scale = 1 + scrollFactor * 0.1; // smaller factor for smoother zoom
+          img.style.transform = `scale(${scale})`;
+        } else {
+          img.style.transform = 'scale(1)';
+        }
+      });
+      ticking = false;
+    });
+    ticking = true;
+  }
 });
