@@ -23,7 +23,6 @@ document.getElementById('emailBtn').addEventListener('click', () => {
 const tagline = document.querySelector('.tagline');
 const text = "Web Design & Social Media Management";
 let i = 0;
-
 function typeEffect() {
   if (i < text.length) {
     tagline.textContent += text.charAt(i);
@@ -38,3 +37,19 @@ typeEffect();
 window.onload = () => {
   window.scrollTo(0, 0);
 };
+
+// Zoom effect on service card images when scrolling
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.zoom-card img').forEach(img => {
+    const rect = img.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      // Element is visible → zoom in
+      const scrollFactor = (window.innerHeight - rect.top) / window.innerHeight;
+      const scale = 1 + scrollFactor * 0.2; // adjust 0.2 for intensity
+      img.style.transform = `scale(${scale})`;
+    } else {
+      // Reset when not visible
+      img.style.transform = 'scale(1)';
+    }
+  });
+});
