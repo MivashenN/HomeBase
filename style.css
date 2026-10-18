@@ -45,6 +45,7 @@ nav a:hover { background: #333; color: #ff6a00; }
 
 /* About Section */
 #about {
+    text-align: center;
   background: url('images/about.jpg') center/cover no-repeat;
   border-radius: 8px;
   overflow: hidden;
@@ -71,19 +72,36 @@ nav a:hover { background: #333; color: #ff6a00; }
   gap: 2rem;
 }
 .card {
-  background: #1e1e1e;
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  padding: 2rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
 }
-.card h3 { font-size: 1.6rem; color: #ee0979; margin-top: 0; }
-.card p { font-size: 1.1rem; }
 .card img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  height: auto;
+  display: block;
   transition: transform 0.3s ease-out;
+}
+.card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.card-overlay h3 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  color: #00b4d8; /* light blue heading */
+}
+.card-overlay p {
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 /* Contact Section */
